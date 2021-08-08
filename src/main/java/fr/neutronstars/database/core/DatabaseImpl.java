@@ -19,9 +19,12 @@ import fr.neutronstars.database.api.Database;
 import fr.neutronstars.database.api.Query;
 
 import java.sql.*;
+import java.util.logging.Logger;
 
 public class DatabaseImpl implements Database<Connection, ResultSet>
 {
+    private static final Logger LOGGER = Logger.getLogger("DATABASE");
+
     static {
         try {
             Class.forName("com.mysql.cj.jdbc.Driver").newInstance();
@@ -92,6 +95,12 @@ public class DatabaseImpl implements Database<Connection, ResultSet>
             this.connection = null;
         }
         return this;
+    }
+
+    @Override
+    public Logger getLogger()
+    {
+        return DatabaseImpl.LOGGER;
     }
 
     @Override

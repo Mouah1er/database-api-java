@@ -21,9 +21,14 @@ import fr.neutronstars.database.core.DatabaseImpl;
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.util.Arrays;
+import java.util.Random;
 
 public class DatabaseTest
 {
+    private static Object rand(Random random, Object o) {
+        return (o instanceof Object[]) ? rand(random, ((Object[]) o)[random.nextInt(((Object[]) o).length)]) : o;
+    }
+
     public static void main(String[] args)
     {
         try {

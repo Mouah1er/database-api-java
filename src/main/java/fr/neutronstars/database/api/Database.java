@@ -17,10 +17,13 @@ package fr.neutronstars.database.api;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.logging.Logger;
 
 public interface Database<T, R>
 {
     T get();
+
+    Logger getLogger();
 
     Database<T, R> connect() throws Exception;
 
