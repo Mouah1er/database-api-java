@@ -2,7 +2,7 @@ plugins {
     id 'java'
 }
 
-group 'org.example'
+group 'fr.neutronstars'
 version '1.0-SNAPSHOT'
 
 repositories {
@@ -10,10 +10,5 @@ repositories {
 }
 
 dependencies {
-
-    compile 'mysql:mysql-connector-java:8.0.22'
-}
-
-test {
-    useJUnitPlatform()
+    compile 'mysql:mysql-connector-java:8.0.25'
 }
