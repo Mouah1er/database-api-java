@@ -1,3 +1,12 @@
+import fr.neutronstars.database.api.Database;
+import fr.neutronstars.database.api.Query;
+import fr.neutronstars.database.core.DatabaseImpl;
+
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.util.Arrays;
+import java.util.Random;
+
 /**
  * Copyright 2021 NeutronStars
  * <p>
@@ -13,15 +22,6 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-
-import fr.neutronstars.database.api.Database;
-import fr.neutronstars.database.api.Query;
-import fr.neutronstars.database.core.DatabaseImpl;
-
-import java.sql.Connection;
-import java.sql.ResultSet;
-import java.util.Arrays;
-import java.util.Random;
 
 public class DatabaseTest
 {

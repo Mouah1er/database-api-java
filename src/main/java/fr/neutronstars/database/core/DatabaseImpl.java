@@ -56,7 +56,8 @@ public class DatabaseImpl implements Database<Connection, ResultSet>
     private final String host, port, database, user, password, charset;
     private Connection connection;
 
-    private DatabaseImpl(String host, String port, String database, String user, String password, String charset)
+    // to allow polymorphism
+    protected DatabaseImpl(String host, String port, String database, String user, String password, String charset)
     {
         this.host = host;
         this.port = port;
