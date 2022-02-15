@@ -53,8 +53,8 @@ public class DatabaseImpl implements Database<Connection, ResultSet>
         return new DatabaseImpl(host, port, database, user, password, charset);
     }
 
-    private final String host, port, database, user, password, charset;
-    private Connection connection;
+    protected final String host, port, database, user, password, charset;
+    protected Connection connection;
 
     // to allow polymorphism
     protected DatabaseImpl(String host, String port, String database, String user, String password, String charset)
